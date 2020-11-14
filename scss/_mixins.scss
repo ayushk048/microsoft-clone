@@ -1,0 +1,15 @@
+//media
+$phone: "screen and (max-width: 767px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 1024px)";
+
+@mixin media-query($device){
+    @if $device == "phone" {
+        @media #{$phone} {
+          @content;
+        }
+    } @else if $device == "tablet" {
+        @media #{$tablet} {
+          @content;
+        }
+    }
+}

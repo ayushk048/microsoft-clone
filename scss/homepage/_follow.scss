@@ -1,0 +1,18 @@
+.follow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    p{
+        transform: translateY(-5px);
+        font-weight: 600;
+    }
+    p::after{
+        content: ' :';
+    }
+
+    * {
+      margin-right: 10px;
+    }
+  }
+  

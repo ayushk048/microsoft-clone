@@ -1,0 +1,41 @@
+*{
+    margin : 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+:root{
+    --primary-theme-color : #a80000;
+    --text-color-dark : #000000;
+    --text-color-light : #ffffff;
+    --anchor-tag-color : #262626;
+}
+
+
+//mixins
+@import './mixins';
+
+//utilities
+@import './utilities';
+
+//components
+@import './components/button';
+
+
+// navbar
+@import './navbar';
+
+//footer
+@import './footer';
+
+//homepage
+@import './homepage/hero';
+@import './homepage/showcase-services';
+@import './homepage/home-cards';
+@import './homepage/xbox';
+@import './homepage/follow'
+
+
+
+
