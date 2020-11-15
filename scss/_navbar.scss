@@ -60,17 +60,19 @@
         ul.main-menu {
             z-index: 100;
             display: block;
-            position: absolute;
+            position: fixed;
             top:0;
             left: 0;
             background: #f2f2f2;
             width: 80%;
-            height: 100%;
+            height: 100vh;
             border-right: #ccc 1px solid;
             opacity: 0.99;
             padding: 30px;
+            margin: 0;
             transform: translateX(-500px);
             transition: transform 0.5s ease-in-out;
+
             li {
                 padding: 10px;
                 border-bottom: #ccc solid 1px;
@@ -82,7 +84,10 @@
           }
           ul.main-menu.show {
             transform: translateX(-20px);
-          }    
+            main {
+                touch-action: none;
+            }
+        }    
 
         ul.right-menu {
         margin-right: 50px;
