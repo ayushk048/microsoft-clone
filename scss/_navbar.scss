@@ -1,26 +1,40 @@
-.menu-btn {
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    z-index: 2;
-    display: none;
-}
-  
-
-/* Nav */
-.main-nav {
+header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 0 5px #ccc;
+    
+    top: 0;
+    z-index: 999;    
+    /* Nav */
+    .main-nav {
+    margin: 0 auto;
+    
     display: flex;
+
+
+    
     align-items: center;
     justify-content: space-between;
-    height: 60px;
-    padding: 20px 0;
+
+    padding:  18px 0 ;
     font-size: 13px;
 
+    
+    
+    
+    .menu-btn {
+        cursor: pointer;
+        display: none;
+    }
+    
+    
+    
     .logo {
         width: 108px;
     }
-
+    
     ul {
         display: flex;
         
@@ -29,12 +43,12 @@
             a {
                 padding-bottom: 2px;
                 transition: transform 0.4s ease-in;
-
+                
                 &:hover {
                     border-bottom: 2px solid #262626;
                 }
             }
-              
+            
         }
     }
 
@@ -42,30 +56,42 @@
         flex: 1;
         margin-left: 20px;
     }
+    
+}
 
 }
 
 
-
-@media screen and (max-width : 768px){
-    .menu-btn {
-        display: block;
-        &:active {
-          opacity: 0.5;
-        }
-    }
+@include media-query(phone){
+header{
     
     
     .main-nav {
+
+        // padding: 0 2.5%;
+    
+        
+        .menu-btn {
+            width: 30%;
+            display: block;
+            transition: 0.5s ease-in-out;
+
+            &:active {
+              opacity: 0.5;
+            }
+        }
+    
+    
+
         ul.main-menu {
+            width: 100%;
+            height: calc(100vh - 60px);
             z-index: 100;
             display: block;
             position: fixed;
-            top:0;
+            top:60px;
             left: 0;
             background: #f2f2f2;
-            width: 80%;
-            height: 100vh;
             border-right: #ccc 1px solid;
             opacity: 0.99;
             padding: 30px;
@@ -83,15 +109,18 @@
               }
           }
           ul.main-menu.show {
-            transform: translateX(-20px);
+
+            transform: translateX(0px);
             main {
                 touch-action: none;
             }
         }    
 
         ul.right-menu {
-        margin-right: 50px;
+            width: 30%;
+            justify-content: flex-end;
         }
     }
     
+}
 }

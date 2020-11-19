@@ -24,7 +24,6 @@ section#section-1{
 @include media-query(phone){
     .container{
         width:95% ;
-      
     }
 }
 
@@ -41,4 +40,8 @@ section#section-1{
 
 .c-pointer{
     cursor: pointer;
+}
+
+main{
+    margin-top: 65px;
 }
